@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluate a News Article with Sentiment Analysis</title>
+</head>
+<body>
+    
+
+    <main>
+        <section>
+            <p>Enter a URL of an article/blog</p>
+            <form id="form" class="form" method="get">
+                <input id="url" type="text" name="url" required placeholder="URL">
+                <input id="submit" type="submit" name="submit" value="submit">
+            </form>
+        </section>
+
+        <section>
+            <strong>Form Results:</strong>
+            <div id="results">
+                <div id="text"></div>
+                <div id="score_tag"></div>
+                <div id="subjectivity"></div>
+                <div id="agreement"></div>
+                <div id="confidence"></div>
+                <div id="irony"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>This is a footer</p>
+    </footer>
+    <!-- <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script> -->
+</body>
+</html>
