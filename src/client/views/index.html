@@ -11,9 +11,9 @@
     <main>
         <section>
             <p>Enter a URL of an article/blog</p>
-            <form id="form" class="form" method="get">
-                <input id="url" type="text" name="url" required placeholder="URL">
-                <input id="submit" type="submit" name="submit" value="submit">
+            <form id="form" class="form" method="post" onsubmit="return Client.handleSubmit(event)">
+                <input id="url" type="text" name="url" required placeholder="URL" >
+                <input id="submit" type="submit" name="submit" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
             </form>
         </section>
 
