@@ -25,13 +25,15 @@ console.log(__dirname);
 
 
 app.get('/', function (req, res) {
-   res.sendFile('dist/index.html');
+//    res.send('src/server/index.js');
+    res.sendFile('dist/index.html');
     // res.sendFile(path.resolve('src/client/views/index.html'))
 });
 
-app.post('/',  (req, res) => {
-    const url = req.body.input;
-    res.send(mcloudAPIResponse);
+app.post('/',  async (req, res) => {
+    const url = req.body.url;
+    const response = await mcloudAPIResponse.mcloudAPI(url, key);
+    res.send(response);
    
 });
 
