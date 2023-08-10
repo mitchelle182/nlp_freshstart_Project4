@@ -3,7 +3,7 @@ const baseURL = "https://api.meaningcloud.com/sentiment-2.1";
 
 
 const mcloudAPI = async (url, key) => {
-  const response= await fetch(`${baseURL}?key${key}&lang=en&url=${url}`);
+  const response= await fetch(`${baseURL}?key=${key}&lang=en&url=${url}`);
  
   try {
     const data = await response.json();
