@@ -6,3 +6,4 @@ import './styles/header.scss';
 
 import { handleSubmit } from './js/formHandler';
 import { checkForUrl } from './js/urlChecker';
+document.getElementById('submit').addEventListener('click', handleSubmit);
