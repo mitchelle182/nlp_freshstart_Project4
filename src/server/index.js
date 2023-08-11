@@ -28,7 +28,7 @@ app.get('/', function (req, res) {
 });
 
 app.post('/',  async (req, res) => {
-    //const url = req.body.url;
+    const url = req.body.url;
     const response = await mcloudAPIResponse.mcloudAPI(url, key); //call API
     res.send(response); //send back data to frontend
    console.log(response);
